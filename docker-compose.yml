@@ -1,0 +1,32 @@
+version: '3'
+services:
+  spring-boot-app:
+    build:
+      context: ./Library-Back
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    depends_on:
+      - mysql-db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-db:3306/library?createDatabaseIfNotExist=true
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=null
+      - SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.MySQLDialect
+
+  mysql-db:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=null
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1 
+      - MYSQL_DATABASE=library
+    ports:
+      - 3306:3306
+  react-app:
+    build:
+      context: ./Library-Front
+      dockerfile: Dockerfile
+    ports:
+      - 3030:3000
+    volumes:
+      - node_modules
