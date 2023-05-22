@@ -20,7 +20,7 @@ Overall, this Library Management Project demonstrates the effective utilization 
  
 ## clone it
 ```
-https://github.com/ngGenerateUsername/Library-Management.git|
+https://github.com/ngGenerateUsername/Library-Management.git
 ```
 
 
