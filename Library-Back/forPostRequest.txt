@@ -1,0 +1,36 @@
+//login admin
+{
+    "username":"admin",
+    "password":"admin"
+}
+
+
+//post category
+{
+    "title":"politique",
+    "description":"lorem mourad salah karim abel fatteh bla bla bla"
+}
+
+
+//post book
+{
+    "title":"moukadma",
+    "author":"ebn khouldoun",
+    "category":{"catId":1}
+}
+
+//post subscriber
+{
+    "fname":"mourad",
+    "lname":"fallousa",
+    "address":"ras jebel",
+    "expirationDate":"2024-02-02"
+}
+
+//post booking
+
+    {
+        "id_sub":1,
+        "id_book":1,
+        "giveBack":"2023-08-03"
+    }
